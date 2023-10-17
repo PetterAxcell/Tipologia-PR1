@@ -12,7 +12,7 @@ Esta práctica se ha realizado bajo el contexto de la asignatura _Tipología y c
 
 ## Miembros del equipo
 
-### [👤](#)Gorka Pineda Burgueño
+### [👤](#) Gorka Pineda Burgueño
 
 ### [👤](https://www.linkedin.com/in/PetterAxcell) Petter Axcell Peñafiel Macías
 Ingeniero en informática (mención en tecnologia de la información y comunicación) e ingeniero en sistemas de telecomunicaciones. Actualmente cursando el máster de Data Science, con aspiración de completar el máster en Inteligencia Artificial en acabar.
