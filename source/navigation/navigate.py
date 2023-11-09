@@ -8,7 +8,8 @@ class Navigate:
         self.command = Commands(self.driver)
         self.extract = Extract(self.driver)
         self.product = []
-    
+        self.id_product = 0
+           
     def prerequisites(self):
         self.command.avoid_cookies()
         self.command.avoid_pop_up()
@@ -37,5 +38,7 @@ class Navigate:
         count_products = 0
         while count_products < self.product_depth:
             self.command.goto_anchor(products_anchors[count_products])
-            self.product.append(self.extract.get_info_product())
+            self.product.append(self.extract.get_info_product(self.id_product))
             self.command.close_anchor()
+            count_products += 1
+            self.id_product +=1
