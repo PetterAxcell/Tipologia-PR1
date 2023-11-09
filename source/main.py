@@ -13,7 +13,7 @@ def main():
     driver = options.get_driver(WEB_NAVIGATOR)
     driver.get(URL)
     
-    navigate = Navigate(driver)
+    navigate = Navigate(driver, PRODUCT_DEPTH)
     products = navigate.get_products()
 
     driver.quit()

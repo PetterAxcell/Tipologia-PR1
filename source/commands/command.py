@@ -33,15 +33,20 @@ class Commands:
     def get_categories(self):
         return self.driver.find_elements(By.CSS_SELECTOR, "ul.Categoey--categoryList--2QES_k6 a")
     
-    def goto_category_anchor(self, category_anchor):
-        print("goto_category")
-        url_category = category_anchor.get_attribute('href')  # Get URL
+    def get_subcategories(self):
+        return self.driver.find_elements(By.XPATH, '//div[@class="lv3Category--lv3CategoryBox--1Nts99Z"]/a')
+
+    def get_products(self):
+        return self.driver.find_elements(By.CLASS_NAME, 'multi--container--1UZxxHY')
+
+    def goto_anchor(self, anchor):
+        url_category = anchor.get_attribute('href')  # Get URL
         self.driver.execute_script("window.open('');")  # Open new tab
         self.driver.switch_to.window(self.driver.window_handles[-1])  # Switch to new tab
         self.driver.get(url_category)  # Go to the URL
         time.sleep(random.uniform(1, 3))  # wait random time
 
-    def close_category_anchor(self):
+    def close_anchor(self):
         # Close the tab
         self.driver.close()
         self.driver.switch_to.window(self.driver.window_handles[-1])  # Switch to previous tab
