@@ -15,7 +15,6 @@ class Extract:
         product["image"] = self.get_image(id_product)
         product["original_price"] = self.get_original_price()
         product["discount"] = self.get_discount()
-        print(product)
         return product
 
     def get_price(self):
@@ -48,7 +47,7 @@ class Extract:
         for i_entrega in entrega:                   
             string_entrega += i_entrega.text
         string_entrega = '' if "Entrega " not in string_entrega else string_entrega
-        print(string_entrega)
+        return string_entrega
 
     def get_image(self, id_product):
         try:
