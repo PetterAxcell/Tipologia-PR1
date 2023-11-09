@@ -41,20 +41,20 @@ time.sleep(random.uniform(1, 3))  # wait random time
 
 #  Get all the anchors from the dropdown (categories)
 dropdown_anchors = driver.find_elements(By.CSS_SELECTOR, "ul.Categoey--categoryList--2QES_k6 a")
-for category_anchor in dropdown_anchors:
+for dropdown_anchor in dropdown_anchors:
 
     driver.execute_script("window.open('');")  # Open new tab
     driver.switch_to.window(driver.window_handles[-1])  # Switch to new tab
-    driver.get(category_anchor.get_attribute('href'))  # Go to the URL
+    driver.get(dropdown_anchor.get_attribute('href'))  # Go to the URL
     time.sleep(random.uniform(1, 3))  # wait random time
 
     #  Get all the anchors from the category (subcategories)
     category_anchors = driver.find_elements(By.XPATH, '//div[@class="lv3Category--lv3CategoryBox--1Nts99Z"]/a')
-    for subcategory_anchor in category_anchors:
+    for category_anchor in category_anchors:
 
         driver.execute_script("window.open('');")  # Open new tab
         driver.switch_to.window(driver.window_handles[-1])  # Switch to new tab
-        driver.get(subcategory_anchor.get_attribute('href'))  # Go to the URL
+        driver.get(category_anchor.get_attribute('href'))  # Go to the URL
         time.sleep(random.uniform(1, 3))  # wait random time
 
         #  Get all the anchors from the subcategory (products)
