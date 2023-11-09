@@ -89,13 +89,24 @@ for dropdown_anchor in dropdown_anchors:
                 title_string += it_price.text
             print(title_string.split('Artículos similares')[0])
 
-
+            #details
             details = driver.find_elements(By.XPATH, "//div[@id='nav-specification']/ul/li/div/div/span")
             details_diccionari = {}
             for i in range (0, len(details), 2):
                 details_diccionari[details[i].text] = details[i+1].text
 
             print(details_diccionari)
+
+            #entrega
+            entrega = driver.find_elements(By.XPATH, "//div[@id='root']/div/div[3]/div/div[2]/div/div/div[3]/div/div[2]/div/div[2]")
+            string_entrega = ''
+            for i_entrega in entrega:                   
+                string_entrega += i_entrega.text
+            if "Entrega " in string_entrega:
+                pass
+            else:
+                string_entrega= ''
+            print(string_entrega)
             # Close the tab
             driver.close()
             driver.switch_to.window(driver.window_handles[-1])  # Switch to previous tab
