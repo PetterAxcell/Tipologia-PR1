@@ -72,10 +72,30 @@ for dropdown_anchor in dropdown_anchors:
             driver.get(url_product)  # Go to the URL
             time.sleep(random.uniform(1, 3))  # wait random time
 
-            # PETTER CODE ####
+            print("Get price")
+            price = driver.find_elements(By.XPATH, '//div[2]/div/div/div/div[2]/div[2]/div/div/span')
+            price_string = ''
+            for it_price in price:
+                price_string += it_price.text
+            price = driver.find_elements(By.XPATH, '//div[3]/div/div/div/div[2]/div[2]/div/div/span')
+            for it_price in price:
+                price_string += it_price.text
 
+            print(price_string)
             ######
+            title_string = ''
+            title = driver.find_elements(By.XPATH, '//h1')
+            for it_price in title:
+                title_string += it_price.text
+            print(title_string.split('Artículos similares')[0])
 
+
+            details = driver.find_elements(By.XPATH, "//div[@id='nav-specification']/ul/li/div/div/span")
+            details_diccionari = {}
+            for i in range (0, len(details), 2):
+                details_diccionari[details[i].text] = details[i+1].text
+
+            print(details_diccionari)
             # Close the tab
             driver.close()
             driver.switch_to.window(driver.window_handles[-1])  # Switch to previous tab
