@@ -43,18 +43,20 @@ time.sleep(random.uniform(1, 3))  # wait random time
 dropdown_anchors = driver.find_elements(By.CSS_SELECTOR, "ul.Categoey--categoryList--2QES_k6 a")
 for dropdown_anchor in dropdown_anchors:
 
+    url_dropdown = dropdown_anchor.get_attribute('href')  # Get URL
     driver.execute_script("window.open('');")  # Open new tab
     driver.switch_to.window(driver.window_handles[-1])  # Switch to new tab
-    driver.get(dropdown_anchor.get_attribute('href'))  # Go to the URL
+    driver.get(url_dropdown)  # Go to the URL
     time.sleep(random.uniform(1, 3))  # wait random time
 
     #  Get all the anchors from the category (subcategories)
     category_anchors = driver.find_elements(By.XPATH, '//div[@class="lv3Category--lv3CategoryBox--1Nts99Z"]/a')
     for category_anchor in category_anchors:
 
+        url_category = category_anchor.get_attribute('href')  # Get URL
         driver.execute_script("window.open('');")  # Open new tab
         driver.switch_to.window(driver.window_handles[-1])  # Switch to new tab
-        driver.get(category_anchor.get_attribute('href'))  # Go to the URL
+        driver.get(url_category)  # Go to the URL
         time.sleep(random.uniform(1, 3))  # wait random time
 
         #  Get all the anchors from the subcategory (products)
@@ -64,9 +66,10 @@ for dropdown_anchor in dropdown_anchors:
             if i >= product_depth:  # Check product navigation depth
                 break
 
+            url_product = product_anchor.get_attribute('href')  # Get URL
             driver.execute_script("window.open('');")  # Open new tab
             driver.switch_to.window(driver.window_handles[-1])  # Switch to new tab
-            driver.get(product_anchor.get_attribute('href'))  # Go to the URL
+            driver.get(url_product)  # Go to the URL
             time.sleep(random.uniform(1, 3))  # wait random time
 
             # PETTER CODE ####
