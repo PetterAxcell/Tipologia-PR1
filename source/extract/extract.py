@@ -14,6 +14,7 @@ class Extract:
         product["day_delivery"] = self.get_day_delivery()
         product["image"] = self.get_image(id_product)
         product["original_price"] = self.get_original_price()
+        product["discount"] = self.get_discount()
         print(product)
         return product
 
@@ -62,3 +63,7 @@ class Extract:
     def get_original_price(self):
         original_price = self.driver.find_elements(By.CSS_SELECTOR, ".price--originalText--Zsc6sMv") 
         return original_price[0].text
+
+    def get_discount(self):
+        discount = self.driver.find_elements(By.CSS_SELECTOR, ".price--discount--xET8qnP") 
+        return discount[0].text 
