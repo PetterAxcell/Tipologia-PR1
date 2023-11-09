@@ -2,9 +2,10 @@ from selenium import webdriver
 from selenium.webdriver.common.by import By
 from selenium.webdriver.support.ui import WebDriverWait
 from selenium.webdriver.support import expected_conditions
+from selenium.webdriver.firefox.options import Options
 import time
 import random
-from selenium.webdriver.firefox.options import Options
+
 
 product_depth = 3
 
@@ -45,7 +46,6 @@ for category_link in dropdown_urls:
     driver.execute_script("window.open('');")  # Open new tab
     driver.switch_to.window(driver.window_handles[-1])  # Switch to new tab
     driver.get(category_link.get_attribute('href'))  # Go to the URL
-
     time.sleep(random.uniform(1, 3))  # wait random time
 
     #  Get all the URLs from the category (subcategories)
@@ -55,7 +55,6 @@ for category_link in dropdown_urls:
         driver.execute_script("window.open('');")  # Open new tab
         driver.switch_to.window(driver.window_handles[-1])  # Switch to new tab
         driver.get(subcategory_link.get_attribute('href'))  # Go to the URL
-
         time.sleep(random.uniform(1, 3))  # wait random time
 
         #  Get all the URLs from the subcategory (products)
@@ -68,7 +67,6 @@ for category_link in dropdown_urls:
             driver.execute_script("window.open('');")  # Open new tab
             driver.switch_to.window(driver.window_handles[-1])  # Switch to new tab
             driver.get(product_link.get_attribute('href'))  # Go to the URL
-
             time.sleep(random.uniform(1, 3))  # wait random time
 
             # PETTER CODE ####
