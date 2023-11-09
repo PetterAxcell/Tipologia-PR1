@@ -26,7 +26,6 @@ class Navigate:
             self.command.goto_anchor(category_anchor)
             self.navigate_subcategories()
             self.command.close_anchor()
-            break
 
     def navigate_subcategories(self):
         subcategories_anchors = self.command.get_subcategories()
@@ -34,7 +33,6 @@ class Navigate:
             self.command.goto_anchor(subcategory)
             self.navigate_products()
             self.command.close_anchor()
-            break
 
     def navigate_products(self):
         products_anchors = self.command.get_products()
