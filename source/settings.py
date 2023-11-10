@@ -3,6 +3,13 @@ from selenium.webdriver.firefox.options import Options
 
 
 class Opt:
+    """
+    A class to manage browser options and retrieve Selenium web drivers.
+
+    Methods:
+        __init__(): Initializes browser options for the web drivers.
+        get_driver(type_client="firefox"): Retrieves a Selenium web driver based on the specified browser type.
+    """
     def __init__(self):
         self.options = Options()
 

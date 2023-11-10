@@ -1,8 +1,24 @@
 from commands.command import Commands
 from extract.extract import Extract
 
-
 class Navigate:
+    """
+    Class responsible for navigating through categories, subcategories, and products on a website using Selenium.
+
+    Attributes:
+        driver: WebDriver object for browsing the web.
+        product_depth: Depth or number of products to extract.
+
+    Methods:
+        get_products(): Initiates the navigation process and returns the extracted products.
+    
+    Private methods:
+        __init__(driver, product_depth): Constructor initializing the browser, product depth, and necessary objects.
+        prerequisites(): Performs initial setup tasks like handling cookies and pop-ups.
+        navigate_categories(): Navigates through different categories on the website.
+        navigate_subcategories(): Navigates through subcategories under each category.
+        navigate_products(): Navigates through individual products and extracts their information.
+    """
     def __init__(self, driver, product_depth):
         self.product_depth = product_depth
         self.driver = driver

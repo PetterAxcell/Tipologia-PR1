@@ -2,6 +2,27 @@ import urllib.request
 from selenium.webdriver.common.by import By
 
 class Extract:
+    """
+    Class to extract various details of a product from a web page using Selenium.
+
+    Attributes:
+        driver: WebDriver object to navigate and interact with web elements.
+
+    Methods:
+        get_info_product(id_product): Extracts various details of the product based on its ID.
+    
+    Private methods:
+        get_price(): Extracts the price of the product.
+        get_title(): Extracts the title of the product.
+        get_detail(): Extracts the details of the product.
+        get_day_delivery(): Extracts the expected delivery information.
+        get_image(id_product): Attempts to download and store the product image.
+        get_original_price(): Extracts the original price of the product.
+        get_discount(): Extracts the discount on the product.
+        get_stars(): Extracts the rating of the product.
+        get_number_rating(): Extracts the number of ratings for the product.
+        get_sold_products(): Extracts the number of products sold.
+    """
     def __init__(self, driver):
         self.driver = driver
 
