@@ -1,7 +1,6 @@
 import urllib.request
 from selenium.webdriver.common.by import By
 
-
 class Extract:
     def __init__(self, driver):
         self.driver = driver
@@ -9,7 +8,10 @@ class Extract:
     def get_info_product(self, id_product):
         product = {"id": id_product, "price": self.get_price(), "title": self.get_title(), "details": self.get_detail(),
                    "day_delivery": self.get_day_delivery(), "image": self.get_image(id_product),
-                   "original_price": self.get_original_price(), "discount": self.get_discount()}
+                   "original_price": self.get_original_price(), "discount": self.get_discount(),
+                   "stars": self.get_stars(), "n_rating": self.get_number_rating(), 
+                   "n_products_sold": self.get_sold_products()
+                   }
         return product
 
     def get_price(self):
@@ -62,3 +64,15 @@ class Extract:
     def get_discount(self):
         discount = self.driver.find_elements(By.CSS_SELECTOR, ".price--discount--xET8qnP")
         return discount[0].text
+
+    def get_stars(self):
+        stars = self.driver.find_elements(By.CSS_SELECTOR, ".reviewer--wrap--sPGWrNq > strong")
+        return stars[0].text
+    
+    def get_number_rating(self):
+        ratings = self.driver.find_elements(By.CSS_SELECTOR, ".reviewer--wrap--sPGWrNq > a")
+        return ratings[0].text
+    
+    def get_sold_products(self):
+        number = self.driver.find_elements(By.CSS_SELECTOR, ".reviewer--wrap--sPGWrNq > span:nth-child(5)")
+        return number[0].text
