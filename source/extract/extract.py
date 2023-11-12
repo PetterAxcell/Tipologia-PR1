@@ -1,6 +1,7 @@
 import urllib.request
 from selenium.webdriver.common.by import By
 
+
 class Extract:
     """
     Class to extract various details of a product from a web page using Selenium.
@@ -23,6 +24,7 @@ class Extract:
         get_number_rating(): Extracts the number of ratings for the product.
         get_sold_products(): Extracts the number of products sold.
     """
+
     def __init__(self, driver):
         self.driver = driver
 
@@ -30,7 +32,7 @@ class Extract:
         product = {"id": id_product, "price": self.get_price(), "title": self.get_title(), "details": self.get_detail(),
                    "day_delivery": self.get_day_delivery(), "image": self.get_image(id_product),
                    "original_price": self.get_original_price(), "discount": self.get_discount(),
-                   "stars": self.get_stars(), "n_rating": self.get_number_rating(), 
+                   "stars": self.get_stars(), "n_rating": self.get_number_rating(),
                    "n_products_sold": self.get_sold_products()
                    }
         return product
@@ -80,20 +82,35 @@ class Extract:
 
     def get_original_price(self):
         original_price = self.driver.find_elements(By.CSS_SELECTOR, ".price--originalText--Zsc6sMv")
-        return original_price[0].text
+        if original_price:
+            return original_price[0].text
+        else:
+            return "No original price"
 
     def get_discount(self):
         discount = self.driver.find_elements(By.CSS_SELECTOR, ".price--discount--xET8qnP")
-        return discount[0].text
+        if discount:
+            return discount[0].text
+        else:
+            return "No discount"
 
     def get_stars(self):
         stars = self.driver.find_elements(By.CSS_SELECTOR, ".reviewer--wrap--sPGWrNq > strong")
-        return stars[0].text
-    
+        if stars:
+            return stars[0].text
+        else:
+            return "No stars"
+
     def get_number_rating(self):
         ratings = self.driver.find_elements(By.CSS_SELECTOR, ".reviewer--wrap--sPGWrNq > a")
-        return ratings[0].text
-    
+        if ratings:
+            return ratings[0].text
+        else:
+            return "No ratings"
+
     def get_sold_products(self):
         number = self.driver.find_elements(By.CSS_SELECTOR, ".reviewer--wrap--sPGWrNq > span:nth-child(5)")
-        return number[0].text
+        if number:
+            return number[0].text
+        else:
+            return "No sold products"

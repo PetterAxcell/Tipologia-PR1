@@ -1,6 +1,7 @@
 from commands.command import Commands
 from extract.extract import Extract
 
+
 class Navigate:
     """
     Class responsible for navigating through categories, subcategories, and products on a website using Selenium.
@@ -19,6 +20,7 @@ class Navigate:
         navigate_subcategories(): Navigates through subcategories under each category.
         navigate_products(): Navigates through individual products and extracts their information.
     """
+
     def __init__(self, driver, product_depth):
         self.product_depth = product_depth
         self.driver = driver
