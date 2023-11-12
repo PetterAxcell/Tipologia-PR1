@@ -55,7 +55,7 @@ class Navigate:
     def navigate_products(self):
         products_anchors = self.command.get_products()
         count_products = 0
-        while count_products < self.product_depth:
+        while count_products < self.product_depth and products_anchors:
             self.command.goto_anchor(products_anchors[count_products])
             self.product.append(self.extract.get_info_product(self.id_product))
             self.command.close_anchor()
