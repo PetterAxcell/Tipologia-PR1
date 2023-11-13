@@ -4,4 +4,4 @@ venv/
 **/__pycache__/
 documentation/
 csv/*
-img/*
+data/img/*

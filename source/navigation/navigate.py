@@ -41,23 +41,35 @@ class Navigate:
     def navigate_categories(self):
         category_anchors = self.command.get_categories()
         for category_anchor in category_anchors:
-            self.command.goto_anchor(category_anchor)
-            self.navigate_subcategories()
-            self.command.close_anchor()
+            try:
+                self.command.goto_anchor(category_anchor)
+                self.navigate_subcategories()
+            except Exception as e:
+                print(e)
+            finally:
+                self.command.close_anchor()
 
     def navigate_subcategories(self):
         subcategories_anchors = self.command.get_subcategories()
         for subcategory in subcategories_anchors:
-            self.command.goto_anchor(subcategory)
-            self.navigate_products()
-            self.command.close_anchor()
+            try:
+                self.command.goto_anchor(subcategory)
+                self.navigate_products()
+            except Exception as e:
+                print(e)
+            finally:
+                self.command.close_anchor()
 
     def navigate_products(self):
         products_anchors = self.command.get_products()
         count_products = 0
         while count_products < self.product_depth and products_anchors:
-            self.command.goto_anchor(products_anchors[count_products])
-            self.product.append(self.extract.get_info_product(self.id_product))
-            self.command.close_anchor()
+            try:
+                self.command.goto_anchor(products_anchors[count_products])
+                self.product.append(self.extract.get_info_product(self.id_product))
+            except Exception as e:
+                print(e)
+            finally:
+                self.command.close_anchor()
             count_products += 1
             self.id_product += 1

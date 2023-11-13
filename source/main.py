@@ -2,7 +2,7 @@ from settings import Opt
 from save.save import Save
 from navigation.navigate import Navigate
 
-PRODUCT_DEPTH = 10
+PRODUCT_DEPTH = 5
 URL = "https://es.aliexpress.com/"
 WEB_NAVIGATOR = "firefox"
 FORMAT = "CSV"
