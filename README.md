@@ -26,7 +26,10 @@ Y ejecutar el siguiente código:
 
 ## Miembros del equipo
 
-### [👤](#) Gorka Pineda Burgueño
+### [👤](https://www.linkedin.com/in/gorka-pineda-burgue%C3%B1o/) Gorka Pineda Burgueño
+Ingeniero en informática (mención en tecnologia de la información y comunicación) e ingeniero en sistemas de telecomunicaciones. Cofundador de la consultora tecnológica, NordlyArrow, y actualmente cursando el máster de Data Science.
+
+Trabajo como técnico de investigación en machine learning y blockchain. Además he realizado las prácticas en ITnow, en las que estuve como ingeniero de sistemas y TI, y finalmente los últimos meses hice Data science.
 
 ### [👤](https://www.linkedin.com/in/PetterAxcell) Petter Axcell Peñafiel Macías
 Ingeniero en informática (mención en tecnologia de la información y comunicación) e ingeniero en sistemas de telecomunicaciones. Cofundador de la consultora tecnológica, NordlyArrow, y actualmente cursando el máster de Data Science, con aspiración de continuar mis estudios en el máster en Inteligencia Artificial.
