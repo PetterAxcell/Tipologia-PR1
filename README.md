@@ -3,6 +3,13 @@
 ## Descripción
 Esta práctica se ha realizado bajo el contexto de la asignatura _Tipología y ciclo de vida de los datos_, perteneciente al _Máster en Ciencia de Datos de la Universitat Oberta de Catalunya_. En ella, se aplican técnicas de web scraping mediante el lenguaje de programación Python para extraer así datos de la web PlaneCrashInfo y generar un dataset.
 
+## Uso
+Para ejecutar el programa es necesario instalar las dependencias que se encuentran en el requirements.txt.
+Y ejecutar el siguiente código:
+
+    > python3 source/main.py  
+
+
 ## Ficheros
 
 ### Carpeta src
