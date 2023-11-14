@@ -12,7 +12,7 @@ Y ejecutar el siguiente código:
 
 ## Ficheros
 
-### Carpeta src
+### Carpeta source
 - source/main.py: punto de entrada en el programa. Inicio del proceso de scrapping.
 - source/settings.py: fichero de creación y configuración del driver.
 - navigatation/navigate.py: fichero que almacena toda la lógica de navegación del proyecto.
@@ -20,6 +20,9 @@ Y ejecutar el siguiente código:
 - extract/extract.py: fichero encargado de recopilar la información de los productos.
 - save/save.py: fichero que almacena en diferentes formatos la información extraida
 
+### Carpeta data
+- data/csv/dataset.csv: se guarda en formato csv los productos obtenidos.
+- data/img/*: se guardan las imagenes extraidas de los productos.
 
 ## Miembros del equipo
 
@@ -32,6 +35,9 @@ He trabajado como programador junior desarrollando soluciones web y web scraping
 
 ## DOI de Zenodo
 [10.5281/zenodo.10125871](https://doi.org/10.5281/zenodo.10125871)
+
+## Consideraciones
+Si se desea alamcenar los datos en formato json, hay que crear primero la carpeta "data/json"
 
 ## Recursos
 1. Lawson, R. (2015). Web Scraping with Python. Packt Publishing Ltd. Chapter 2. Scraping the Data.
