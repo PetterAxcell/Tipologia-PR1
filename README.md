@@ -19,8 +19,8 @@ Ingeniero en informática (mención en tecnologia de la información y comunicac
 
 He trabajado como programador junior desarrollando soluciones web y web scraping, además de trabajar como técnico de investigación en compresión de datos basado en machine learning. Actualmente me encuentro trabajando gestionando clústeres (HPC) aplicando técnicas de orquestación en CentOs/Rocky.
 
-## Organización del trabajo
-[Añadir trello]
+## DOI de Zenodo
+[10.5281/zenodo.10125871](https://doi.org/10.5281/zenodo.10125871)
 
 ## Recursos
 1. Lawson, R. (2015). Web Scraping with Python. Packt Publishing Ltd. Chapter 2. Scraping the Data.
