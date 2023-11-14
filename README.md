@@ -19,9 +19,9 @@ Esta práctica se ha realizado bajo el contexto de la asignatura _Tipología y c
 ### [👤](#) Gorka Pineda Burgueño
 
 ### [👤](https://www.linkedin.com/in/PetterAxcell) Petter Axcell Peñafiel Macías
-Ingeniero en informática (mención en tecnologia de la información y comunicación) e ingeniero en sistemas de telecomunicaciones. Actualmente cursando el máster de Data Science, con aspiración de completar el máster en Inteligencia Artificial en acabar.
+Ingeniero en informática (mención en tecnologia de la información y comunicación) e ingeniero en sistemas de telecomunicaciones. Cofundador de la consultora tecnológica, NordlyArrow, y actualmente cursando el máster de Data Science, con aspiración de continuar mis estudios en el máster en Inteligencia Artificial.
 
-He trabajado como programador junior desarrollando soluciones web y web scraping, además de trabajar como técnico de investigación en compresión de datos basado en machine learning. Actualmente me encuentro trabajando gestionando clústeres (HPC) aplicando técnicas de orquestación en CentOs/Rocky.
+He trabajado como programador junior desarrollando soluciones web y web scraping, durante mi último año estube como técnico de investigación en compresión de datos basado en machine learning. Además mi anterior trabajo fue gestionando clústeres (HPC) aplicando técnicas de orquestación mediante SLURM en CentOs/Rocky. Actualmente me encuentro como técnico de investigación en el hospital clínico.
 
 ## DOI de Zenodo
 [10.5281/zenodo.10125871](https://doi.org/10.5281/zenodo.10125871)
