@@ -6,8 +6,12 @@ Esta práctica se ha realizado bajo el contexto de la asignatura _Tipología y c
 ## Ficheros
 
 ### Carpeta src
-- src/main.py: punto de entrada en el programa. Inicio del proceso de scrapping.
-
+- source/main.py: punto de entrada en el programa. Inicio del proceso de scrapping.
+- source/settings.py: fichero de creación y configuración del driver.
+- navigatation/navigate.py: fichero que almacena toda la lógica de navegación del proyecto.
+- commands/command.py: fichero en el que se implementa las interacciones con la página web.
+- extract/extract.py: fichero encargado de recopilar la información de los productos.
+- save/save.py: fichero que almacena en diferentes formatos la información extraida
 
 
 ## Miembros del equipo
